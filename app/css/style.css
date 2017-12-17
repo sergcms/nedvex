@@ -276,30 +276,27 @@ button:hover, button:active, button:focus  {
 	font-size: 16px;
 	font-weight: 500;	
 	line-height: 1;
-	padding: 14px 30px;
-	border-radius: 25px;
+	padding: 18px 30px;
+  border-radius: 25px;
+  min-width: 237px;
+  display: inline-block;
+  text-align: center;
 }
 .btn:active, .btn:hover, .btn.focus {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: none;
 }
-.btn {
+.btn.btn-default, .btn.small {
   color: #4c4f5f;
 	background-color: #fff;
-}
-.btn.btn-default {
-  padding: 18px 30px;
-  min-width: 237px;
-  display: inline-block;
-  text-align: center;
 }
 .btn.apple > * {
   font-size: 23px;
   vertical-align: middle;
   margin-right: 15px;
 }
-.btn:hover {
+.btn.btn-default:hover, .btn.small:hover {
 	color: #fff;
 	background-color: #e0a446;
 }
@@ -313,7 +310,7 @@ button:hover, button:active, button:focus  {
   padding: 16px 30px;
 }
 @media (max-width: 479px) {
-  .btn.btn-default, .btn.apple.small {
+  .btn.btn-default, .btn.small {
     width: 100%;
   }  
 }
@@ -350,7 +347,7 @@ button:hover, button:active, button:focus  {
 /* === INNER === */
 .inner {
   /* height: 100vh; */
-  padding: 10px 0; /* можно так, чтоб на другой блок не залазило? */
+  padding: 10px 0 50px; /* можно так, чтоб на другой блок не залазило? */
   background: url('../img/inner-bg.jpg') no-repeat center/cover;
   position: relative;
 }
