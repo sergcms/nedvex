@@ -1,5 +1,6 @@
 /* RESET CSS */
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 body {
@@ -265,6 +266,11 @@ button:hover, button:active, button:focus  {
 .default-section {
 	padding: 70px 0;
 }
+@media (max-width: 599px) {
+  .default-section {
+    padding: 50px 0;
+  } 
+}
 /* === BUTTON === */
 .btn {
 	font-size: 16px;
@@ -274,6 +280,7 @@ button:hover, button:active, button:focus  {
 	border-radius: 25px;
 }
 .btn:active, .btn:hover, .btn.focus {
+	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: none;
 }
@@ -283,7 +290,7 @@ button:hover, button:active, button:focus  {
 }
 .btn.btn-default {
   padding: 18px 30px;
-  width: 237px;
+  min-width: 237px;
   display: inline-block;
   text-align: center;
 }
@@ -298,12 +305,17 @@ button:hover, button:active, button:focus  {
 }
 .btn.apple.small {
   padding: 13px 20px;
-  width: 150px;
+  min-width: 150px;
   display: inline-block;
   text-align: center;
 }
 .btn.small {
   padding: 16px 30px;
+}
+@media (max-width: 479px) {
+  .btn.btn-default, .btn.apple.small {
+    width: 100%;
+  }  
 }
 /* === BUTTON END === */
 
@@ -337,7 +349,8 @@ button:hover, button:active, button:focus  {
 /* CUSTOM STYLE */
 /* === INNER === */
 .inner {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 10px 0; /* можно так, чтоб на другой блок не залазило? */
   background: url('../img/inner-bg.jpg') no-repeat center/cover;
   position: relative;
 }
@@ -377,17 +390,46 @@ button:hover, button:active, button:focus  {
 .inner-content .btn + .btn {
   margin-left: 25px;
 } 
+@media (max-width: 767px) {
+  .inner {
+    height: 100%;
+    padding: 70px 0;
+  }
+  .inner-img {
+    display: none;
+  }
+  .inner .container {
+    padding-top: 50px;
+  }
+  .inner .inner-content {
+    font-size: 25px;
+    margin-left: 0;
+  }
+  .inner-content p {
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+}
+@media (max-width: 479px) {
+  .inner-content .inner-btn {
+    flex-direction: column;
+  }
+  .inner-content .inner-btn .btn + .btn {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
 /* === INNER END === */
 
 /* === CAPABALITIES === */
-.capabilities-list {
+.block-left .capabilities-list {
   margin-top: 80px;
 }
-.capabilities-item-img {
+.capabilities-item .capabilities-item-img {
   margin-top: 4px;
   margin-right: 14px;
 }
-.capabilities-text {
+.capabilities-item .capabilities-text {
   max-width: 300px;
 }
 .block-left .title, .capabilities-item .title.small {
@@ -396,8 +438,33 @@ button:hover, button:active, button:focus  {
 .capabilities-item .title.small > img {
   margin-right: 14px;
 }
-.capabilities-item + .capabilities-item {
+.block-left .capabilities-item + .capabilities-item {
   margin-top: 40px;
+}
+@media (max-width: 992px) {
+  .capabilities .slider {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .capabilities .block-left {
+    align-self: flex-start;
+  }
+  .block-left .capabilities-list {
+    margin-top: 50px;
+  }
+  .capabilities-item .capabilities-text {
+    max-width: 100%;
+  }
+  .capabilities .slider {
+    margin: 20px 0 0 0;
+  }
+  .capabilities .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 /* === CAPABALITIES END === */
 
@@ -422,6 +489,27 @@ button:hover, button:active, button:focus  {
 .application-btn .btn + .btn {
   margin-left: 27px;
 }
+@media (max-width: 599px) {
+  .application {
+    padding: 60px 0;
+  }
+  .application .application-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .application-btn .btn + .btn {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 479px) {
+  .application p {
+    font-size: 14px;
+  }
+  .application-btn {
+    width: 100%;
+  }
+}
 /* === APPLICATION END === */
 
 /* === FOOTER === */
@@ -434,6 +522,18 @@ button:hover, button:active, button:focus  {
 }
 .footer .container > a {
   color: #469ee0;
+}
+@media (max-width: 599px) {
+  .footer {
+    padding: 30px 0;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .container > * {
+    margin-top: 30px;
+  }
 }
 /* === FOOTER END === */
 /* CUSTOM STYLE END*/
