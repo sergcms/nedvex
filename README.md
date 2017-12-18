@@ -32,8 +32,6 @@
     .btn 
     .btn.btn-default
     .btn.small
-    .btn.apple
-    .btn.apple.small
 ```
 
 ***Классы***

@@ -291,23 +291,17 @@ button:hover, button:active, button:focus  {
   color: #4c4f5f;
 	background-color: #fff;
 }
-.btn.apple > * {
-  font-size: 23px;
-  vertical-align: middle;
-  margin-right: 15px;
-}
 .btn.btn-default:hover, .btn.small:hover {
 	color: #fff;
 	background-color: #e0a446;
 }
-.btn.apple.small {
-  padding: 13px 20px;
+.btn.apple > * {
+  margin-right: 20px;
+}
+.btn.small {
   min-width: 150px;
   display: inline-block;
   text-align: center;
-}
-.btn.small {
-  padding: 16px 30px;
 }
 @media (max-width: 479px) {
   .btn.btn-default, .btn.small {
@@ -346,10 +340,15 @@ button:hover, button:active, button:focus  {
 /* CUSTOM STYLE */
 /* === INNER === */
 .inner {
-  /* height: 100vh; */
-  padding: 10px 0 50px; /* можно так, чтоб на другой блок не залазило? */
+  height: 100vh;
   background: url('../img/inner-bg.jpg') no-repeat center/cover;
   position: relative;
+}
+@media (max-height: 700px) {
+  .inner {
+      height: auto;
+      padding: 70px 0;
+    }
 }
 .inner .container {
   padding-top: 117px;
@@ -381,15 +380,12 @@ button:hover, button:active, button:focus  {
   font-weight: 500;
   margin: 45px 0;
 }
-.inner-content .btn.apple.small > *{
-  font-size: 22px;
-}
-.inner-content .btn + .btn {
-  margin-left: 25px;
+.inner-content .btn + .btn, .application-btn .btn + .btn {
+  margin-left: 27px;
 } 
 @media (max-width: 767px) {
   .inner {
-    height: 100%;
+    height: auto;
     padding: 70px 0;
   }
   .inner-img {
@@ -490,20 +486,11 @@ button:hover, button:active, button:focus  {
 .application .application-btn {
   margin-top: 65px;
 }
-.application-btn .btn > * {
-  margin-right: 27px;
-}
-.application-btn .btn.apple {
-  padding: 14px 31px;
-}
-.application-btn .btn + .btn {
-  margin-left: 27px;
-}
 @media (max-width: 599px) {
   .application {
     padding: 60px 0;
   }
-  .application .application-btn {
+  .application .application-btn, .footer .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -541,15 +528,6 @@ button:hover, button:active, button:focus  {
 @media (max-width: 599px) {
   .footer {
     padding: 30px 0;
-  }
-  .footer .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
   .footer .container > * {
     margin-top: 30px;
