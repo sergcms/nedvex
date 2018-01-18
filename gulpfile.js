@@ -13,3 +13,5 @@ gulp.task('autoprefixer', function() { // создаем таск autoprefixer
 gulp.task('watch', ['autoprefixer'], function() {   // создаем таск watch
   gulp.watch('source/css/*.css', ['autoprefixer']); // следим за изменениями в файлах и обрабатуем их 
 });
+
+gulp.task('default', ['watch']);

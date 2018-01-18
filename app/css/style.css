@@ -276,7 +276,7 @@ button:hover, button:active, button:focus  {
   font-size: 16px;
   font-weight: 500;	
   line-height: 1;
-  padding: 18px 30px;
+  padding: 18px 15px;
   border-radius: 25px;
   min-width: 237px;
   display: inline-block;
@@ -332,7 +332,7 @@ button:hover, button:active, button:focus  {
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 0 20px;
+  padding: 45px 0;
   z-index: 100;
 }
 /* DEFAULT COMPONENT END */
@@ -353,9 +353,6 @@ button:hover, button:active, button:focus  {
 .inner .container {
   padding-top: 117px;
   height: 100%;
-}
-.inner .container img {
-  margin-left: -5px;
 }
 .inner-content {
   font-size: 38px;
@@ -422,9 +419,11 @@ button:hover, button:active, button:focus  {
   margin-top: 80px;
 }
 .capabilities-item .capabilities-item-img {
-  margin-top: 4px;
   margin-right: 14px;
 }
+.capabilities-item-img > .fa {
+  font-size: 23px;
+} 
 .capabilities-item .capabilities-text {
   max-width: 300px;
 }
